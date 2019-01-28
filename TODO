@@ -1,0 +1,22 @@
+TODO for driftnet
+
+* More intelligent layout algorithm for images.
+
+* Memory leaks? Buffer overruns? Static-sized buffers.
+
+* Parse JPEG files properly -- the lame memstr(..., "\xff\xd9") thing is
+  broken and should be done right. At the moment, some JPEG files get
+  truncated in a really bad way. An alternative is to store more state for
+  JPEG files, and do special parsing when we know a connection has closed.
+
+* Problem with some greyscale JPEG files.
+
+* More portability / bug fixes.
+
+* Web-based version. Server push? Feedback problems.
+
+* `Bogus image' problem after running for a while?
+
+* Safe(r) setuid operation.
+
+* Delay between reading packets from dump file?

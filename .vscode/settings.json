@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "gdk.h": "c",
+        "if_ether.h": "c"
+    }
+}

@@ -1,0 +1,136 @@
+Changelog for driftnet
+
+1.2.0
+
+    Add new, http and websockets based, display
+
+    Add basic windows support (cygwin)
+    
+    Add options to list capture interfaces
+    
+    Add support for putting the interface in monitor mode
+
+1.1.1
+
+    Fix compile error on freebsd
+
+1.1
+	Look in HTTP POST too
+
+	Create pidfile
+
+    Add radiotap and 802.11 headers support
+
+1.0
+
+    Add ipv6 support
+      Based on work of Sebastien Decugis.
+      See https://bugs.launchpad.net/ubuntu/+source/driftnet/+bug/16279
+
+    Update TODO file
+
+    Update manual
+
+    Deal better with libpng errors
+
+    Fix memstr() implementation non-working on 64bit systems.
+      Taken from: https://bugzilla.redhat.com/show_bug.cgi?id=201412
+
+    Do not delete temporary files in adjunct mode
+
+    Fix typo in button press_press-release
+
+    Change window initial size
+
+    Refactor source-files structure
+
+    Refactor code
+
+    Update 'is_tempfile()' with png media file extension
+
+    Refactor options handling code
+
+    Improve logging code
+
+    Changes in temporary directory code
+
+    Fix compiler warnings
+
+    Update build system to Autotools
+      - remove makedepend
+      - configure-time option to disable the display window
+      - link against GTK libraries only if we need them
+      - make endian test more portable
+      - more portable sleep function
+      - other minor changes
+
+    Switch from CVS to git
+
+0.1.6+cvs20040426
+
+PNG support
+
+Driftnet now uses GTK2, rather than GTK1.
+
+Added support for reading packets from a pcap dump file (thanks to Rob Timko
+and Joshua Wright for this); and for extracting URLs from HTTP requests (not
+yet exposed in the user interface).
+
+Driftnet will now discard connections after 8Mb of data has been transferred.
+
+Fixed adjunct mode so that stdout is line-buffered, following a suggestion by
+Jonas Jensen.
+
+0.1.6
+
+Changed the algorithm used to search for image start blocks to Boyer-Moore, for
+a performance improvement. Fixed some build errors.
+
+0.1.5
+
+Allow user to save images by clicking on them.
+
+Driftnet now exits more cleanly on interrupt. Various minor bug fixes,
+including an endianness problem in the display code.
+
+The temporary directory used by driftnet may now be specified as a command-line
+option; otherwise, it is created dynamically.
+
+Added the -a (adjunct) and various related options to make it easy to use
+driftnet as a back-end for some other program, such as webcollage. It is now
+possible to compile a back-end only version of driftnet without any X11 support
+by using the NO_DISPLAY_WINDOW option at compile time.
+
+Added the -s option to extract MPEG audio data from network streams, along with
+a ghastly mess of threads and pipes to allow driftnet to play the data to play
+through mpg123 or similar.
+
+Changed some things to make driftnet a bit more portable to non-Linux systems.
+
+0.1.4
+
+Minor bug fixes. Driftnet now tests for the existence of /tmp/imgdump, which
+should eliminate most of my support mail....
+
+0.1.3
+
+Fixed serious bugs in stream capture code, and tidied up same.
+
+Added command-line options for selecting interfaces, verbosity etc.
+
+Made window resizing neater (it now no longer results in erasing the contents
+of the window).
+
+Added cleaner shutdown and signal handling.
+
+Removed vestigial dependencies upon libpnm.
+
+0.1.2
+
+Various bug fixes.
+
+0.1.1
+
+CHANGES file created. Minor bugfixes (including preventing the program
+from quitting when it times out waiting for a packet).
+
